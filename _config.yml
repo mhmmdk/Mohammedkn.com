@@ -1,0 +1,27 @@
+# Variables to access as {{ site.<var> }}
+title: Mohammed Kassahun 
+email: info@mohammedkn.com
+description: A full stack web designer, programmer and Pen tester / security auditor in Ethiopia. Working on security and exploitation. Learning and writing about web application. Giving in on fancy design, I am building problem solver application and participating on problem solving challenges such as Icoglab, google challenge and project Euler.
+
+baseurl: "" 
+url: "https://mohammedkn.com"
+
+facebook_username: mohammedkn
+github_username:  mhmmdkn
+twitter_username: mohammedkn
+
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+
+exclude:
+   - Gemfile
+   - Gemfile.lock
+   - node_modules
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
+
