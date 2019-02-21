@@ -1,10 +1,11 @@
 # Variables to access as {{ site.<var> }}
 title: Mohammed Kassahun 
 email: info@mohammedkn.com
-description: A full stack web designer, programmer and Pen tester / security auditor in Ethiopia. Working on security and exploitation. Learning and writing about web application. Giving in on fancy design, I am building problem solver application and participating on problem solving challenges such as Icoglab, google challenge and project Euler.
+description: A graduate of mathematics working on security and exploitation in Ethiopia. Learning and writing about web application to become full stack engineer or to die trying. Being sick of fancy design, I am building problem solver application and participating on problem solving challenges and projects such as Icoglab, google challenge and project Euler.
 
 baseurl: "" 
 url: "https://mohammedkn.com"
+permalink: /:title
 
 facebook_username: mohammedkn
 github_username:  mhmmdkn
@@ -14,6 +15,11 @@ twitter_username: mohammedkn
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+paginate: 12
+paginate_path: "posts/page:num/"
 
 
 exclude:

@@ -1,0 +1,20 @@
+---
+layout: post
+title:  Mohammed Kn | Mohammedkn.com
+description: Full stack engineer in Ethiopia. Mohammed kassahun. mohammedkn. Mohammedkn.com
+permalink: pro
+---
+
+<div class="container-fluid mb-5">
+  <div class="container p-responsive mb-4" >
+    <div class="d-flex flex-column flex-wrap ">
+      {% for page in site.posts %}
+	<div class="col-9 mb-3 border-bottom">
+	  {{ page.excerpt }} <small><a href="{{ page.url }}">continue  &rarr;</a></small><br>
+	</div>
+       {% endfor %}  
+     </div>
+
+
+  </div> 
+</div>

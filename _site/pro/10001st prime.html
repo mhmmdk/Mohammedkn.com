@@ -1,0 +1,215 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="What is the 10 001st prime number?">
+  <meta name="author" content="Mohammed Kassahun">
+
+  <link rel="icon" href="http://localhost:4000/assets/icons/fav.png" type="image/icon">
+  <link rel="stylesheet" href='http://localhost:4000/assets/css.css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+  <script src='http://localhost:4000/assets/js.js' crossorigin='anonymous' defer></script>
+
+  <title>10001st prime</title>
+</head>
+<body>
+
+<div class="container-fluid p-2 mb-5 border-bottom">
+  <div class="container " id="header" >
+    <span ><a id='logo' href="http://localhost:4000" class="text-decoration-none current" ><font class="h3"> Mohammed K</a><a href="http://localhost:4000" class="text-decoration-none current" ><span id="animate" class="">assahu</span>n</font></a></span>
+    <span style="float:right">
+      <a href="/app" class="pl-2 text-decoration-none ">Applications</a>
+      <a href="http://localhost:4000/pro" class="pl-2 text-decoration-none current ">Projects</a>
+      <a href="/todo" class="pl-2 text-decoration-none ">Todo</a>
+    </span>
+  </div>
+</div>
+
+
+
+
+
+<div class="container mb-3">
+    <nav >
+      <ul class="pagination pagination-sm flex-wrap">
+	
+	
+	
+	  <a href="/pro/introduction" data-toggle="tooltip" title="Project Euler introduction"><li class="page-item page-link">0</li></a>
+	
+	  <a href="/pro/Multiples of 3 and 5" data-toggle="tooltip" title="Multiples of 3 and 5"><li class="page-item page-link">1</li></a>
+	
+	  <a href="/pro/Even Fibonacci numbers" data-toggle="tooltip" title="Even Fibonacci numbers"><li class="page-item page-link">2</li></a>
+	
+	  <a href="/pro/Largest prime factor" data-toggle="tooltip" title="Largest prime factor"><li class="page-item page-link">3</li></a>
+	
+	  <a href="/pro/Largest palindrome product" data-toggle="tooltip" title="Largest palindrome product"><li class="page-item page-link">4</li></a>
+	
+	  <a href="/pro/Smallest multiple" data-toggle="tooltip" title="Smallest multiple"><li class="page-item page-link">5</li></a>
+	
+	  <a href="/pro/Sum square difference" data-toggle="tooltip" title="Sum square difference"><li class="page-item page-link">6</li></a>
+	
+	  <a href="/pro/10001st prime" data-toggle="tooltip" title="10001st prime"><li class="page-item page-link">7</li></a>
+	
+	  <a href="/pro/Largest product in a series" data-toggle="tooltip" title="Largest product in a series"><li class="page-item page-link">8</li></a>
+	
+	  <a href="/pro/Special Pythagorean triplet" data-toggle="tooltip" title="Special Pythagorean triplet"><li class="page-item page-link">9</li></a>
+	
+	  <a href="/pro/Summation of primes" data-toggle="tooltip" title="Summation of primes"><li class="page-item page-link">10</li></a>
+	
+        <li class="page-item page-link">&raquo;</li>
+      </ul>
+    </nav>
+</div>
+
+<div class="container mb-3"><div class="row">
+  <div class="pl-3 col-3 text-truncate">&nbsp;</div>
+  <div class="col-9">
+    <div class="problem">
+<h3>Problem 7</h3>
+<p>By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+<br />What is the 10 001st prime number?
+</p></div>
+
+<h3>Solution 1: Brute forcing</h3>
+<p>I just stored 10001 primes in the way. I used the primes to check for the next primes.</p>
+
+<div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">primes</span> <span class="o">=</span> <span class="p">[]</span>
+<br /><br /><span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">10001</span><span class="p">:</span>
+    <span class="n">isPrime</span> <span class="o">=</span> <span class="bp">True</span>
+<br />    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">n</span><span class="o">%</span><span class="n">p</span><span class="p">:</span>
+            <span class="n">isPrime</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="k">break</span>
+<br />    <span class="k">if</span> <span class="n">isPrime</span><span class="p">:</span>
+        <span class="n">primes</span> <span class="o">+=</span> <span class="p">[</span><span class="n">n</span><span class="p">]</span>
+        <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+<br />    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+<br /><br /><span class="k">print</span><span class="p">(</span><span class="n">primes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:][</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+<p>This run: <span class="time">~15.046829223632812</span>. I feel like I am stupid. May b I am.<br />
+The output: <span class="answer">104743</span>.</p>
+
+<p> I assumed jumping over multiples of 2, 3 and 5 would reduce the time significantly. Guess what? It  just reduce readablity.
+Of course, it reduced iteration one third of 1 million iteration, while the iteration is much bigger than 1 million.
+<br /> Here is my try.</p>
+
+<div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">29</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">primes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">29</span><span class="p">]</span>
+<br /><br /><span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">10001</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">]:</span>
+        <span class="n">n</span> <span class="o">+=</span> <span class="n">i</span>
+        <span class="n">isPrime</span> <span class="o">=</span> <span class="bp">True</span>
+<br />        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">n</span><span class="o">%</span><span class="n">p</span><span class="p">:</span>
+                <span class="n">isPrime</span> <span class="o">=</span> <span class="bp">False</span>
+                <span class="k">break</span>
+<br />        <span class="k">if</span> <span class="n">isPrime</span><span class="p">:</span>
+            <span class="n">primes</span> <span class="o">+=</span> <span class="p">[</span><span class="n">n</span><span class="p">]</span>
+            <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+<br /><span class="k">print</span><span class="p">(</span><span class="n">primes</span><span class="p">[</span><span class="mi">10000</span><span class="p">])</span>
+</pre></div>
+<p><br /></p>
+
+<p>This run: <span class="time">~14.499957799911499</span>. I feel like I am stupid. Sure I am.<br />
+The output: <span class="answer">104743</span>.</p>
+<p><br /></p>
+
+<h3>Solution 2: Improved Time</h3>
+
+<p>I checked only half of primes to judge the number as prime. This one saved half of the time and iteration not readablity. Feeling smart.</p>
+
+<div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">primes</span> <span class="o">=</span> <span class="p">[]</span>
+<br /><br /><span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">10001</span><span class="p">:</span>
+    <span class="n">isPrime</span> <span class="o">=</span> <span class="bp">True</span>
+<br />    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">primes</span><span class="p"><b>[:</b></span><span class="n"><b>counter</b></span><span class="o"><b>//</b></span><span class="mi"><b>2</b></span><span class="p"><b>]:</b></span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">n</span><span class="o">%</span><span class="n">p</span><span class="p">:</span>
+            <span class="n">isPrime</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="k">break</span>
+<br />    <span class="k">if</span> <span class="n">isPrime</span><span class="p">:</span>
+        <span class="n">primes</span> <span class="o">+=</span> <span class="p">[</span><span class="n">n</span><span class="p">]</span>
+        <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+<br />    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+<br /><br /><span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+<p>This run: <span class="time">~7.953100919723511</span>. This is me.<br />
+The output: <span class="answer">104743</span>.</p>
+<p><br /></p>
+
+<p> We can use jumping of multiples of 2, 3 and 5 for better. right?</p>
+
+<div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">29</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">primes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">29</span><span class="p">]</span>
+
+
+<span class="c1"># no multiples of 2, 3, 5</span>
+<span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">9998</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">]:</span>
+        <span class="n">n</span> <span class="o">+=</span> <span class="n">i</span>
+        <span class="n">isPrime</span> <span class="o">=</span> <span class="bp">True</span>
+<br />        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">[:</span><span class="n">counter</span><span class="o">//</span><span class="mi">5</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">n</span><span class="o">%</span><span class="n">p</span><span class="p">:</span>
+                <span class="n">isPrime</span> <span class="o">=</span> <span class="bp">False</span>
+                <span class="k">break</span>
+<br />        <span class="k">if</span> <span class="n">isPrime</span><span class="p">:</span>
+            <span class="n">primes</span> <span class="o">+=</span> <span class="p">[</span><span class="n">n</span><span class="p">]</span>
+            <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+<br /><br /><span class="k">print</span><span class="p">(</span><span class="n">primes</span><span class="p">[</span><span class="mi">9997</span><span class="p">])</span>
+</pre></div>
+<p><br /></p>
+
+<p>This run: <span class="time">~2.5937414169311523</span>. Challange is opportunity.<br />
+The output: <span class="answer">104743</span>.</p>
+<p><br /></p>
+
+<p> Reducing checking of prime to primes less than or equal to square root of n.</p>
+
+<div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">29</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">primes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">29</span><span class="p">]</span>
+<br /><br /><span class="c1"># no multiples of 2, 3, 5</span>
+<span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">9998</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">]:</span>
+        <span class="n">n</span> <span class="o">+=</span> <span class="n">i</span>
+        <span class="n">isPrime</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">sqrt_n</span> <span class="o">=</span> <span class="n">n</span><span class="o">**</span><span class="mf">0.5</span>
+<br />        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">:</span>
+<br />            <span class="c1"># This is game changer</span>
+            <span class="k">if</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="n">sqrt_n</span><span class="p">:</span>
+                <span class="k">break</span>
+<br />            <span class="k">if</span> <span class="ow">not</span> <span class="n">n</span><span class="o">%</span><span class="n">p</span><span class="p">:</span>
+                <span class="n">isPrime</span> <span class="o">=</span> <span class="bp">False</span>
+                <span class="k">break</span>
+<br />        <span class="k">if</span> <span class="n">isPrime</span><span class="p">:</span>
+            <span class="n">primes</span> <span class="o">+=</span> <span class="p">[</span><span class="n">n</span><span class="p">]</span>
+            <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+<br /><br /><span class="k">print</span><span class="p">(</span><span class="n">primes</span><span class="p">[</span><span class="mi">9997</span><span class="p">])</span>
+</pre></div>
+
+<p>This run: <span class="time">~0.2968735694885254</span>. Wow. I did not dare to think to get answer such time without using Sieve or Miller algorithm.<br />
+The output: <span class="answer">104743</span>.</p>
+<p><br /></p>
+
+
+  </div></div>
+</div>
+
+</body>
+</html>
+
