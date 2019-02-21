@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find the product of pythagorian triples.">
+  <meta name="author" content="Mohammed Kassahun">
+
+  <link rel="icon" href="http://localhost:4000/assets/icons/fav.png" type="image/icon">
+  <link rel="stylesheet" href='http://localhost:4000/assets/css.css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+  <script src='http://localhost:4000/assets/js.js' crossorigin='anonymous' defer></script>
+
+  <title>Special Pythagorean triplet</title>
+</head>
+<body>
+
+<div class="container-fluid p-2 mb-5 border-bottom">
+  <div class="container " id="header" >
+    <span ><a id='logo' href="http://localhost:4000" class="text-decoration-none current" ><font class="h3"> Mohammed K</a><a href="http://localhost:4000" class="text-decoration-none current" ><span id="animate" class="">assahu</span>n</font></a></span>
+    <span style="float:right">
+      <a href="/app" class="pl-2 text-decoration-none ">Applications</a>
+      <a href="http://localhost:4000/pro" class="pl-2 text-decoration-none current ">Projects</a>
+      <a href="/todo" class="pl-2 text-decoration-none ">Todo</a>
+    </span>
+  </div>
+</div>
+
+
+
+
+
+<div class="container mb-3">
+    <nav >
+      <ul class="pagination pagination-sm flex-wrap">
+	
+	
+	
+	  <a href="/pro/introduction" data-toggle="tooltip" title="Project Euler introduction"><li class="page-item page-link">0</li></a>
+	
+	  <a href="/pro/Multiples of 3 and 5" data-toggle="tooltip" title="Multiples of 3 and 5"><li class="page-item page-link">1</li></a>
+	
+	  <a href="/pro/Even Fibonacci numbers" data-toggle="tooltip" title="Even Fibonacci numbers"><li class="page-item page-link">2</li></a>
+	
+	  <a href="/pro/Largest prime factor" data-toggle="tooltip" title="Largest prime factor"><li class="page-item page-link">3</li></a>
+	
+	  <a href="/pro/Largest palindrome product" data-toggle="tooltip" title="Largest palindrome product"><li class="page-item page-link">4</li></a>
+	
+	  <a href="/pro/Smallest multiple" data-toggle="tooltip" title="Smallest multiple"><li class="page-item page-link">5</li></a>
+	
+	  <a href="/pro/Sum square difference" data-toggle="tooltip" title="Sum square difference"><li class="page-item page-link">6</li></a>
+	
+	  <a href="/pro/10001st prime" data-toggle="tooltip" title="10001st prime"><li class="page-item page-link">7</li></a>
+	
+	  <a href="/pro/Largest product in a series" data-toggle="tooltip" title="Largest product in a series"><li class="page-item page-link">8</li></a>
+	
+	  <a href="/pro/Special Pythagorean triplet" data-toggle="tooltip" title="Special Pythagorean triplet"><li class="page-item page-link">9</li></a>
+	
+	  <a href="/pro/Summation of primes" data-toggle="tooltip" title="Summation of primes"><li class="page-item page-link">10</li></a>
+	
+        <li class="page-item page-link">&raquo;</li>
+      </ul>
+    </nav>
+</div>
+
+<div class="container mb-3"><div class="row">
+  <div class="pl-3 col-3 text-truncate">&nbsp;</div>
+  <div class="col-9">
+    <div class="problem">
+<h3>Problem 9</h3>
+<p>A Pythagorean triplet is a set of three natural numbers, <var>a</var> &lt; <var>b</var> &lt; <var>c</var>, for which,
+<div style="text-align:center;"> <var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup></div>
+<br />For example, 3<sup>2</sup> + 4<sup>2</sup> = 9 + 16 = 25 = 5<sup>2</sup>.
+<br />There exists exactly one Pythagorean triplet for which <var>a</var> + <var>b</var> + <var>c</var> = 1000.<br />Find the product <var>abc</var>.
+</p></div>
+
+<h3>Solution 1: Stupid Brute Forcing</h3>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<br /><br /><span class="k">def</span> <span class="nf">tri</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">j</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">i</span><span class="o">*</span><span class="n">j</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">j</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+<br /><br /><span class="k">print</span><span class="p">(</span><span class="n">tri</span><span class="p">(</span><span class="mi">1000</span><span class="p">))</span>
+</pre></div>
+<p>This run: ~<span class="time">0.3749995231628418</span>. It is much less stupid than I imagined at first.<br />
+The output: <samp class="answer">31875000</samp>
+<br /></p>
+
+<p>Just making n to (n - i)//2  in the second for loop for making hypotanous bigger.</p>
+
+<div class="highlight"><pre><span></span><span class="n">initial</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
+<br /><br /><span class="k">def</span> <span class="nf">tri</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>  <span class="c1"># changed from n</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">j</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">i</span><span class="o">*</span><span class="n">j</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">j</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+<br /><br /><span class="k">print</span><span class="p">(</span><span class="n">tri</span><span class="p">(</span><span class="mi">1000</span><span class="p">))</span>
+</pre></div>
+<p><br /></p>
+
+<p>This run: ~<span class="time">0.1249995231628418</span>. Halved.<br />
+The output: <samp class="answer">31875000</samp>
+<br /></p>
+<p><br /></p>
+
+<h3>Solution 2: Smartest way</h3>
+
+<p> <a href="">The m,n formula for generating Pythagorean Triples. Read here! </a>https:// www DOT maths D0T surrey D07 ac D07 uk/hosted-sites/R.Knott/Pythag/pythag.html#section2.3</p>
+
+<p><br />&lt;div class="highlight"&gt;&lt;pre&gt;<span></span><span class="k">def</span> <span class="nf">tri</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
+            <span class="n">a</span> <span class="o">=</span> <span class="n">m</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span>
+            <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">n</span>
+            <span class="n">c</span> <span class="o">=</span> <span class="n">m</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span>
+            <span class="n">tot</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span>
+<br />        <span class="c1"># We got primitive which can</span>
+            <span class="c1"># be multiplied to make answer</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">num</span><span class="o">%</span><span class="n">tot</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">(</span><span class="n">num</span> <span class="o">//</span> <span class="n">tot</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">*</span> <span class="n">c</span><span class="p">)</span>
+<br /><br /><span class="k">print</span><span class="p">(</span><span class="n">tri</span><span class="p">(</span><span class="mi">1000</span><span class="p">))</span>
+&lt;/pre&gt;&lt;/div&gt;<br /></p>
+
+<p>This run: ~<span class="time">0.0</span>. That is it.<br />
+The output: <samp class="answer">31875000</samp>
+<br /></p>
+
+
+  </div></div>
+</div>
+
+</body>
+</html>
+

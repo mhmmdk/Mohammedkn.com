@@ -2,6 +2,24 @@
 
 {% include header.html %}
 
-{{ content }}
+<div class="container mb-3">
+    <nav >
+      <ul class="pagination pagination-sm flex-wrap">
+	{% assign i = 0 %}
+	{% assign posts = site.posts | sort: ":title" | reverse %}
+	{% for p in posts %}
+	  <a href="{{ p.url }}" data-toggle="tooltip" title="{{ p.title }}"><li class="page-item page-link">{{ forloop.index0 }}</li></a>
+	{% endfor %}
+        <li class="page-item page-link">&raquo;</li>
+      </ul>
+    </nav>
+</div>
+
+<div class="container mb-3"><div class="row">
+  <div class="pl-3 col-3 text-truncate">&nbsp;</div>
+  <div class="col-9">
+    {{ content }}
+  </div></div>
+</div>
 
 {% include footer.html %}

@@ -1,0 +1,128 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Solution for find the sum of all the multiples of 3 or 5.">
+  <meta name="author" content="Mohammed Kassahun">
+
+  <link rel="icon" href="http://localhost:4000/assets/icons/fav.png" type="image/icon">
+  <link rel="stylesheet" href='http://localhost:4000/assets/css.css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+  <script src='http://localhost:4000/assets/js.js' crossorigin='anonymous' defer></script>
+
+  <title>Multiples of 3 and 5</title>
+</head>
+<body>
+
+<div class="container-fluid p-2 mb-5 border-bottom">
+  <div class="container " id="header" >
+    <span ><a id='logo' href="http://localhost:4000" class="text-decoration-none current" ><font class="h3"> Mohammed K</a><a href="http://localhost:4000" class="text-decoration-none current" ><span id="animate" class="">assahu</span>n</font></a></span>
+    <span style="float:right">
+      <a href="/app" class="pl-2 text-decoration-none ">Applications</a>
+      <a href="http://localhost:4000/pro" class="pl-2 text-decoration-none current ">Projects</a>
+      <a href="/todo" class="pl-2 text-decoration-none ">Todo</a>
+    </span>
+  </div>
+</div>
+
+
+
+
+
+<div class="container mb-3">
+    <nav >
+      <ul class="pagination pagination-sm flex-wrap">
+	
+	
+	
+	  <a href="/pro/introduction" data-toggle="tooltip" title="Project Euler introduction"><li class="page-item page-link">0</li></a>
+	
+	  <a href="/pro/Multiples of 3 and 5" data-toggle="tooltip" title="Multiples of 3 and 5"><li class="page-item page-link">1</li></a>
+	
+	  <a href="/pro/Even Fibonacci numbers" data-toggle="tooltip" title="Even Fibonacci numbers"><li class="page-item page-link">2</li></a>
+	
+	  <a href="/pro/Largest prime factor" data-toggle="tooltip" title="Largest prime factor"><li class="page-item page-link">3</li></a>
+	
+	  <a href="/pro/Largest palindrome product" data-toggle="tooltip" title="Largest palindrome product"><li class="page-item page-link">4</li></a>
+	
+	  <a href="/pro/Smallest multiple" data-toggle="tooltip" title="Smallest multiple"><li class="page-item page-link">5</li></a>
+	
+	  <a href="/pro/Sum square difference" data-toggle="tooltip" title="Sum square difference"><li class="page-item page-link">6</li></a>
+	
+	  <a href="/pro/10001st prime" data-toggle="tooltip" title="10001st prime"><li class="page-item page-link">7</li></a>
+	
+	  <a href="/pro/Largest product in a series" data-toggle="tooltip" title="Largest product in a series"><li class="page-item page-link">8</li></a>
+	
+	  <a href="/pro/Special Pythagorean triplet" data-toggle="tooltip" title="Special Pythagorean triplet"><li class="page-item page-link">9</li></a>
+	
+	  <a href="/pro/Summation of primes" data-toggle="tooltip" title="Summation of primes"><li class="page-item page-link">10</li></a>
+	
+        <li class="page-item page-link">&raquo;</li>
+      </ul>
+    </nav>
+</div>
+
+<div class="container mb-3"><div class="row">
+  <div class="pl-3 col-3 text-truncate">&nbsp;</div>
+  <div class="col-9">
+    <h3>Problem 1</h3>
+<div class="problem">
+<p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.</p>
+<p>Find the sum of all the multiples of 3 or 5 below 1000.</p>
+</div>
+
+<h3>Solution 1: Mathematical View.</h3>
+<p>Multiples of 3: 3, 6, 9, 12, 15, ... Multiples of 5: 5, 10, 15, 20, 25, ... Multiples of 15(3 &amp; 5): 15, 30, 45, 60, 75, ...</p>
+<p>So we were asked the sum of arithmetic progression - arithmetic series. This can be solved by the equation of arithmetic series. You can read it <a href="https://en.wikipedia.org/wiki/Arithmetic_progression">here. Arithmetic progression</a>.</p>
+<p>Using the equation of arithmetic series: The arithmetic series of multiples of 3 below 1000 is 333 * (3 + 999) / 2 = <span class="answer">166833.0</span>. The arithmetic series of multiples of 5 below 1000 is 199 * (5 + 995) / 2 = <span class="answer">99500</span>. The arithmetic series of multiples of 15 below 1000 is 66 * (15 + 990) / 2 = <span class="answer">33165</span>. We are not asked to add multiples of 15 but we need to subtruct multiples of 15 since it was counted on both side.</p>
+<p>So the answer is summing the sum of multiples of 3 and 5 and subtructing sum multiples of 15. 
+<p> The output: <span class="answer"> 233168 </span></p>
+<p> This only takes pencil and paper. May be calculator.</p>
+
+<h3>Solution 2: Brute Forcing.</h3>
+<p>Let's go through all natural numbers below 1000 and add to our variable if it is divisible by 3 or 5.</p>
+<p>Here is my <code>code in python</code>:  
+
+<div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<br /><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span><span class="o">%</span><span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">n</span>
+<br /><span class="k">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div></p>
+
+<p> The output: <span class="answer">233168 </span></p>
+<p>This code run <span class="red"> ~0.0</span>. So may be there is not the room for improvement!</p> 
+
+<h3>Solution 3: Improved Brute Forcing.</h3>
+<p>We can improve this by making the iteration to the candidates. By iterating through multiples of 15 and adding the pattern of multiples of 3 and 5, we will reduce the iteration from 999 to 66.</p>
+<p><code>Improved code</code>:  
+
+<div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<br /><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">990</span><span class="p">,</span> <span class="mi">15</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="mi">30</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">n</span> 
+    <span class="n">total</span> <span class="o">+=</span> <span class="mi">30</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">n</span> 
+<br /><span class="n">total</span> <span class="o">+=</span> <span class="mi">993</span> <span class="o">+</span> <span class="mi">996</span> <span class="o">+</span> <span class="mi">999</span>
+<span class="n">total</span> <span class="o">+=</span> <span class="mi">995</span>
+<br /><span class="k">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+
+<p>The output: <span class="answer">233168 </span></p>
+<p>This code run <span class="red"> </span>~0.0</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</p></p>
+
+  </div></div>
+</div>
+
+</body>
+</html>
+
