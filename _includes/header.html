@@ -20,14 +20,19 @@
 </head>
 <body>
 
-<div class="container-fluid p-2 mb-5 border-bottom">
+<div class="container-fluid p-md-2 mb-md-5 border-bottom">
   <div class="container " id="header" >
-    <span ><a id='logo' href="{{ site.url}}" class="text-decoration-none current" ><font class="h3"> Mohammed K</a><a href="{{ site.url}}" class="text-decoration-none current" ><span id="animate" class="">assahu</span>n</font></a></span>
-    <span style="float:right">
-      <a href="/app" class="pl-2 text-decoration-none {% if page.url contains '/app'%}current {%endif%}">Applications</a>
-      <a href="{{ site.url}}/pro" class="pl-2 text-decoration-none {% if page.url contains '/pro'%}current {%endif%}">Projects</a>
-      <a href="/todo" class="pl-2 text-decoration-none {% if page.url contains '/todo' %}current {%endif%}">Todo</a>
-    </span>
+    <div class="d-flex justify-content-around">
+      
+      <div class="h3"><a id='logo' href="{{ site.url}}" class="text-decoration-none current" >Mohammed K</a><a href="{{ site.url}}" class="text-decoration-none current" ><span id="animate" class="">assahu</span>n</a></div>
+      <div class="" id="search"></div>  
+      <div>
+        <a href="/app" class="pl-md-2 text-decoration-none {% if page.url contains '/app'%}current {%endif%}">Applications</a>
+        <a href="{{ site.url}}/pro" class="pl-md-2 text-decoration-none {% if page.url contains '/pro'%}current {%endif%}">Projects</a>
+        <a href="/todo" class="pl-md-2 text-decoration-none {% if page.url contains '/todo' %}current {%endif%}">Todo</a>
+      </div>
+    
+    </div>
   </div>
 </div>
 
