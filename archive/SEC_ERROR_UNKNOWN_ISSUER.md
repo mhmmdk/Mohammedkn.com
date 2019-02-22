@@ -1,3 +1,10 @@
+---
+layout: post
+title: How I solved SEC_ERROR_UNKNOWN_ISSUER for my subdomain.
+description: How I solved SEC_ERROR_UNKNOWN_ISSUER for my subdomain.
+no: 1
+---
+
 ### How I solved SEC_ERROR_UNKNOWN_ISSUER for my subdomain.
 I had this error when I access my subdomain [file](https://file.mohammedkn.com). I abled to access the site by adding the site to exceptions. What I couldn't is making my site not to show the error for others like you.
 
