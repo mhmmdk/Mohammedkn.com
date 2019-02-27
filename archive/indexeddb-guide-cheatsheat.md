@@ -39,33 +39,33 @@ description: Usage and reference for indexeddb cheatsheat
   <tr>
     <td>IDBDatabase</td>
     <td></td>
+    <td></td>
     <td>IDBDatabase.name, IDBDatabase.version, IDBDatabase.objectStoreNames</td>
-    <td>IDBDatabase.close(), IDBDatabase.createObjectStore(), </td>
-    <td></td>
-    <td></td>
+    <td>IDBDatabase.close(), IDBDatabase.createObjectStore(), IDBDatabase.deleteObjectStore(), IDBDatabase.transaction(), </td>
+    <td>abort, close, error, versionchange</td>
   </tr>  
   <tr>
     <td>IDBTransaction</td>
+    <td>'IDBDatabase.transaction(<array_object_store>, <[readwrite][versionchange][readonly]> )'</td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>IDBTransaction.db, IDBTransaction.error, IDBTransaction.mode, IDBTransaction.objectStoreNames </td>
+    <td>IDBTransaction.abort, IDBTransaction.objectStore</td>
+    <td>abort, complete, error</td>
   </tr>
     <tr>
     <td>IDBRequest</td>
+    <td>EventTarget, all</td>
     <td></td>
+    <td>IDBRequest.error, IDBRequest.result, IDBRequest.source, IDBRequest.readyState, IDBRequest.transaction</td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>error, success</td>
   </tr>
     <tr>
     <td>IDBObjectStore</td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
+    <td>IDBObjectStore.indexNames, IDBObjectStore.keyPath, IDBObjectStore.name, IDBObjectStore.transaction, IDBObjectStore.autoIncrement</td>
+    <td>"IDBObjectStore.add(<val>, <[key]>), IDBObjectStore.clear(), IDBObjectStore.count(<[key|IDBKeyRange]>), IDBObjectStore.createIndex(indexname, indexname, {keyPath: <colum>, <[IDBIndexParameter]>}), IDBObjectStore.delete(<key|keyRange>), IDBObjectStore.deleteIndex(<indexname>), IDBObjectStore.get(<key>), IDBObjectStore.getKey(<key>), IDBObjectStore.getAll(), IDBObjectStore.getAllKeys(), IDBObjectStore.index(<indexname>), IDBObjectStore.openCursor(), IDBObjectStore.openKeyCursor(), IDBObjectStore.put(<item>, <[key]>)"</td>
     <td></td>
   </tr>
     <tr>
