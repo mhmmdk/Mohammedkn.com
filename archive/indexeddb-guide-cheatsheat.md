@@ -72,8 +72,8 @@ description: Usage and reference for indexeddb cheatsheat
     <td>IDBIndex</td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
+    <td>IDBIndex.name, IDBIndex.objectStore, IDBIndex.keyPath, IDBIndex.multiEntry, IDBIndex.unique</td>
+    <td>IDBIndex.count(), IDBIndex.get(), IDBIndex.getKey(), IDBIndex.getAll(), IDBIndex.getAllKeys()IDBIndex.openCursor(), IDBIndex.openKeyCursor()</td>
     <td></td>
   </tr>
     <tr>
@@ -96,23 +96,15 @@ description: Usage and reference for indexeddb cheatsheat
     <td>IDBKeyRange</td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>lower, lowerOpen, upper, upperOpen</td>
+    <td>bound(), includes(), lowerBound(), only(), upperBound()</td>
+    <td>complete, abort, success, error, close</td>
   </tr>
     <tr>
     <td>IDBVersionChangeEvent</td>
     <td></td>
     <td></td>
+    <td>newVersion, oldVersion, version</td>
     <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
+    <td>complete, abort, success, error, close</td>
 </table>
