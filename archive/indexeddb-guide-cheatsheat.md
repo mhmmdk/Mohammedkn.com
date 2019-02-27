@@ -1,0 +1,118 @@
+---
+title: indexdb cheatsheat
+description: Usage and reference for indexeddb cheatsheat
+---
+
+<table>
+  <tr>
+    <th>Interface</th>
+    <th>Parent</th>
+    <th>Implemented by</th>
+    <th>Property</th>
+    <th>Method</th>
+    <th>Event</th>
+  </tr>
+  <tr>
+    <td>IDBEnvironment</td>
+    <td></td>
+    <td>window, worker</td>
+    <td>IDBEnvironment.indexedDB</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>IDBFactory</td>
+    <td></td>
+    <td>window.indexedDB</td>
+    <td></td>
+    <td>IDBFactory.open, IDBFactory.deleteDatabase, IDBFactory.cmp</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>IDBOpenDBRequest</td>
+    <td>IDBRequest, EventTarget.</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>blocked, upgradeneeded</td>
+  </tr>
+  <tr>
+    <td>IDBDatabase</td>
+    <td></td>
+    <td>IDBDatabase.name, IDBDatabase.version, IDBDatabase.objectStoreNames</td>
+    <td>IDBDatabase.close(), IDBDatabase.createObjectStore(), </td>
+    <td></td>
+    <td></td>
+  </tr>  
+  <tr>
+    <td>IDBTransaction</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>IDBRequest</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>IDBObjectStore</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>IDBIndex</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>IDBCursor</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>IDBCursorWithValue</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>IDBKeyRange</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>IDBVersionChangeEvent</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
