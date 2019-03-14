@@ -6,7 +6,7 @@
 
    var disqus_config = function () {
    this.page.url = '{{page.permalink}}';  
-   this.page.identifier = '{{page.title}}'; 
+   /*this.page.identifier = '{{page.title}}'; */
    };
 
    (function() { 
