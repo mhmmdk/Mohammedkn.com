@@ -16,3 +16,11 @@
     from {font-size: 15%;}
     to {font-size: 100%;}
   }
+
+.highlight{
+  border: 0.1px solid #dddddd;
+  border-radius: 9px;
+  padding: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
