@@ -15,12 +15,11 @@ twitter_username: mohammedkn
 markdown: kramdown
 kramdown:
   syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-
+#  syntax_highlighter_opts:
+#    span:
+#      line_numbers: false
+#    block:
+#      line_numbers: true
 # Conversion markdown: redcarpet 
 # used for highlighting
 #highlighter: pygments 
