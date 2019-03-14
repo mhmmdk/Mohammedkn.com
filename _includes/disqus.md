@@ -1,5 +1,5 @@
 
-<div style="container mb-3">
+<div class="container mb-3">
 {% if page.comments %}
 <div id="disqus_thread"></div>
 <script>
