@@ -1,5 +1,5 @@
 
-<div class="container mb-3 border rounded">
+<div class="container mb-3 border rounded shadow">
    {% if page.comments %}
    <div id="disqus_thread"></div>
    <script>
