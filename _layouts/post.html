@@ -8,7 +8,7 @@
 	{% assign i = 0 %}
 	{% assign posts = site.posts | sort: ":title" | reverse %}
 	{% for p in posts %}
-	  <a href="{{ p.url }}" data-toggle="tooltip" title="{{ p.title }}"><li class="page-item page-link">{{ forloop.index0 }}</li></a>
+	  <li class="page-item page-link" data-toggle="tooltip" title="{{ p.title }}"><a href="{{ p.url }}" >{{ forloop.index0 }}</a></li>
 	{% endfor %}
         <li class="page-item page-link">&raquo;</li>
       </ul>
