@@ -2,8 +2,8 @@
       color: #0056b3;  
     }
     body{
-        font-weight: 350;
-        font-size: 1.5rem;
+        font-weight: 350 !important;
+        font-size: 1.5rem !important;
     }
   .hvr {
     -webkit-animation-name: example; 
