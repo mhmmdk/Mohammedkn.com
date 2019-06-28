@@ -1,7 +1,10 @@
     .current{
       color: #0056b3;  
     }
-
+    body{
+        font-weight: 350;
+        font-size: 1.5rem;
+    }
   .hvr {
     -webkit-animation-name: example; 
     -webkit-animation-duration: 4s; 
