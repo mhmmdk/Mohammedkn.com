@@ -4,7 +4,7 @@
     body{
         font-weight: 375 !important;
         font-size: 18px !important;
-
+        color: black !important;
     }
   .hvr {
     -webkit-animation-name: example; 
