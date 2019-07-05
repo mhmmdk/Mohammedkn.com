@@ -1,0 +1,49 @@
+# Variables to access as {{ site.<var> }}
+title: Mohammed Kassahun 
+email: info@mohammedkn.com
+description: A graduate of mathematics working on security and exploitation in Ethiopia. Learning and writing about web application to become full stack engineer or to die trying. Being sick of fancy design, I am building problem solver application and participating on problem solving challenges and projects such as Icoglab, google challenge and project Euler.
+
+baseurl: "" 
+url: "https://mohammedkn.com"
+permalink: /:title
+
+facebook_username: mohammedkn
+github_username:  mhmmdkn
+twitter_username: mohammedkn
+
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+# Conversion markdown: redcarpet 
+# used for highlighting
+#highlighter: pygments 
+#redcarpet: extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", #"strikethrough", "superscript"]
+
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+
+paginate: 12
+paginate_path: "posts/page:num/"
+
+
+exclude:
+   - Gemfile
+   - Gemfile.lock
+   - node_modules
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
+
