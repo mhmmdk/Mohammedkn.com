@@ -5,7 +5,7 @@ description: A graduate of mathematics working on security and exploitation in E
 
 baseurl: "" 
 url: "https://mohammedkn.com"
-permalink: /:name/:output_ext
+permalink: /:name:output_ext
 
 facebook_username: mohammedkn
 github_username:  mhmmdkn
@@ -14,16 +14,16 @@ twitter_username: mohammedkn
 collections:
   archive:
     output: true
-    permalink: /:name/:output_ext
+    permalink: /:archive/:name:output_ext
   todo:
     output: true
-    permalink: /:name/:output_ext
+    permalink: /:todo/:name:output_ext
   app:
     output: true
-    permalink: /:name/:output_ext
+    permalink: /:app/:name:output_ext
   pro:
     output: true
-    permalink: /:name/:output_ext
+    permalink: /:pro/:name:output_ext
 
 markdown: kramdown
 kramdown:
