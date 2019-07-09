@@ -5,7 +5,7 @@ description: A graduate of mathematics working on security and exploitation in E
 
 baseurl: "" 
 url: "https://mohammedkn.com"
-permalink: /:title
+permalink: /:title/:output_ext
 
 facebook_username: mohammedkn
 github_username:  mhmmdkn
@@ -20,7 +20,7 @@ kramdown:
     span:
       line_numbers: false
     block:
-      line_numbers: true
+      line_numbers: false
 
 # Conversion markdown: redcarpet 
 # used for highlighting
