@@ -15,15 +15,6 @@ collections:
   archive:
     output: true
     permalink: /:archive/:name:output_ext
-  todo:
-    output: true
-    permalink: /:todo/:name:output_ext
-  app:
-    output: true
-    permalink: /:app/:name:output_ext
-  pro:
-    output: true
-    permalink: /:pro/:name:output_ext
 
 markdown: kramdown
 kramdown:
