@@ -12,6 +12,11 @@ github_username:  mhmmdkn
 twitter_username: mohammedkn
 
 collections:
+  - archive
+  - app
+  - pro
+  - todo
+collections:
   archive:
     output: true
     permalink: /:archive/:name:output_ext
