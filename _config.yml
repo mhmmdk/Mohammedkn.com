@@ -16,6 +16,7 @@ collections:
   - app
   - pro
   - todo
+  
 collections:
   archive:
     output: true
