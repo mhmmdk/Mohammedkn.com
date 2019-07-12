@@ -10,3 +10,11 @@
   - server-side code execution
   - Authotication and authorization flaws
   - Abusing metedologies
+## Vuln
+- email spoofing
+- phishing
+- 
+## Toread
+[lcamtuf](https://lcamtuf.blogspot.com/)
+[scarybeastsecurity](https://scarybeastsecurity.blogspot.com/)
+[project zero](#)
