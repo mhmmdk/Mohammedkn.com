@@ -10,6 +10,7 @@
   - server-side code execution
   - Authotication and authorization flaws
   - Abusing metedologies
+  - open redirect ->     Content Security Policy bypass. Referrer check bypass. URL whitelist bypass. Angular ng-include bypass. Working redirect to javascript: or data: URL
 ## Vuln
 - email spoofing
 - phishing
