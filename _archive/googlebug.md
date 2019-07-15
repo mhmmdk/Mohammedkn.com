@@ -12,7 +12,7 @@
   - Abusing metedologies
   - open redirect ->     Content Security Policy bypass. Referrer check bypass. URL whitelist bypass. Angular ng-include bypass. Working redirect to javascript: or data: URL
 ## Vuln
-- email spoofing
+- email/content spoofing
 - phishing
 - 
 ## Toread
