@@ -57,3 +57,5 @@ exclude:
    - vendor/gems/
    - vendor/ruby/
 
+# file: `_config.yml`
+theme: jekyll-theme-hydejack
