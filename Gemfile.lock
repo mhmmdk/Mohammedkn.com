@@ -1,8 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.6.0)
-      public_suffix (>= 2.0.2, < 4.0)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.4)
     em-websocket (0.5.1)
@@ -29,11 +29,18 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.11.0)
       jekyll (~> 3.3)
+    jekyll-include-cache (0.2.1)
+      jekyll (>= 3.7, < 5.0)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-seo-tag (2.5.0)
       jekyll (~> 3.3)
+    jekyll-sitemap (1.4.0)
+      jekyll (>= 3.7, < 5.0)
+    jekyll-theme-hydejack (9.1.4)
+      jekyll (>= 3.8, < 5.0)
+      jekyll-include-cache (~> 0.2)
     jekyll-watch (2.1.2)
       listen (~> 3.0)
     kramdown (1.17.0)
@@ -43,13 +50,9 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
     mercenary (0.3.6)
-    minima (2.5.0)
-      jekyll (~> 3.5)
-      jekyll-feed (~> 0.9)
-      jekyll-seo-tag (~> 2.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    public_suffix (3.0.3)
+    public_suffix (4.0.6)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -69,7 +72,9 @@ DEPENDENCIES
   jekyll (~> 3.8.5)
   jekyll-feed (~> 0.6)
   jekyll-paginate
-  minima (~> 2.0)
+  jekyll-seo-tag
+  jekyll-sitemap
+  jekyll-theme-hydejack
   tzinfo-data
 
 BUNDLED WITH
